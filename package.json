@@ -1,6 +1,6 @@
 {
-  "name": "swiper",
-  "version": "0.0.0",
+  "name": "swipeit",
+  "version": "0.0.1",
   "description": "Javascript Module to handle swipe events on DOM elements - that emits events on swipe.",
   "main": "index.js",
   "scripts": {
