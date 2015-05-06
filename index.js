@@ -36,6 +36,17 @@ var Swiper = function(element, thresholdX, thresholdY){
   this.element.addEventListener('touchend', _onUp, false);
   this.element.addEventListener('mousedown', _onDown, false);        
   this.element.addEventListener('mouseup', _onUp, false);
+  
+  this.remove = function() {
+    that.element.removeEventListener('touchstart', _onDown);
+    that.element.removeEventListener('touchend', _onUp);
+    that.element.removeEventListener('mousedown', _onDown);
+    that.element.removeEventListener('mouseup', _onUp);
+    that.element = null;
+    
+    that.events.removeAllListeners();
+    that.events = null;
+  };
 }
 
 Swiper.prototype.emit = function(event, data){
